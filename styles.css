@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lemonada:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   --primary-color: #5d5fef;
@@ -83,7 +83,7 @@ body {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lemonada", cursive;
 }
 
 .nav__bar {
@@ -144,13 +144,13 @@ body {
 }
 
 .header__content {
-  padding: 5rem 1rem;
+  padding: 4rem 1rem;
   grid-column: 2/3;
 }
 
 .header__content h1 {
   margin-bottom: 1rem;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 600;
   line-height: 5rem;
   color: var(--text-dark);
@@ -181,6 +181,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  overflow-x: hidden;
   align-items: center;
 }
 
@@ -201,6 +202,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  overflow-x: hidden;
 }
 
 .about__card h4 {
@@ -223,6 +225,7 @@ body {
   max-width: var(--max-width);
   margin: auto;
   padding: 1rem 1rem;
+  overflow-x: hidden;
 }
 
 .feature__content {
@@ -273,6 +276,7 @@ body {
 
 .project__container {
   padding: 5rem 0;
+  overflow-x: hidden;
 }
 
 .project__header {
@@ -306,7 +310,6 @@ body {
 /* swiper css */
 .swiper {
   width: 100%;
-  overflow: hidden;
 }
 
 .swiper-slide {
@@ -316,6 +319,7 @@ body {
 .project__card {
   position: relative;
   padding-bottom: 3rem;
+  overflow-x: hidden;
 }
 
 .project__content {
@@ -380,7 +384,8 @@ body {
 /* Additional styles for the services section */
 .services__container {
   background-color: var(--extra-light);
-  padding: 5rem 0;
+  padding: 5rem 1.2rem;
+  overflow-x: hidden;
 }
 
 .services__content {
@@ -429,7 +434,8 @@ body {
 /* Additional styles for the testimonials section */
 .testimonials__container {
   background-color: var(--extra-light);
-  padding: 5rem 0;
+  padding: 5rem 1.2rem;
+  overflow-x: hidden;
 }
 
 .testimonials__content {
@@ -499,6 +505,7 @@ body {
 }
 
 .contact__container {
+  overflow-x: hidden;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
