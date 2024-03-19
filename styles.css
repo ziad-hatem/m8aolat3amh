@@ -86,8 +86,20 @@ body {
   font-family: "Lemonada", cursive;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--extra-light);
+  z-index: 1000;
+  box-shadow: 0 20px 100px rgba(0, 0, 0, 0.1); /* Add box-shadow here */
+  height: 100px;
+}
+
 .nav__bar {
   max-width: var(--max-width);
+  width: 100%;
   margin: auto;
   padding: 2rem 1rem;
   display: flex;
@@ -132,6 +144,7 @@ body {
 
 .header {
   background-color: var(--extra-light);
+  margin-top: 100px;
 }
 
 .header__container {
@@ -144,21 +157,21 @@ body {
 }
 
 .header__content {
-  padding: 4rem 1rem;
+  padding: 5rem 1rem;
   grid-column: 2/3;
 }
 
 .header__content h1 {
   margin-bottom: 1rem;
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-weight: 600;
   line-height: 5rem;
   color: var(--text-dark);
 }
 .header__content p {
   margin-bottom: 2rem;
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 2.2;
   color: var(--text-light);
 }
 
@@ -221,62 +234,68 @@ body {
 /* Add this CSS to your existing styles.css file */
 
 /* Feature Section */
-.feature__container {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 1rem 1rem;
-  overflow-x: hidden;
-}
-
-.feature__content {
-  background-color: var(--extra-light);
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+/* Feature Section */
+.features__container {
+  padding: 4rem 0;
+  background-color: #f8f8f8;
   text-align: center;
+  width: 80%;
+  margin: auto;
 }
 
-.feature__content h2 {
-  color: var(--primary-color);
-  margin-bottom: 1.5rem;
-}
-
-.feature__content p {
-  color: var(--text-dark);
+.features__header {
+  font-size: 2rem;
   margin-bottom: 2rem;
+  color: #333;
 }
 
-.feature__list {
+.features__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Updated to display 3 features per row */
   gap: 2rem;
   justify-items: center;
 }
 
 .feature__item {
-  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature__item:hover {
+  transform: translateY(-5px);
 }
 
 .feature__item i {
-  font-size: 4rem;
-  color: var(--primary-color);
+  font-size: 3rem;
+  color: #007bff;
   margin-bottom: 1rem;
 }
 
 .feature__item h3 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--text-dark);
+  font-size: 1.5rem;
   margin-bottom: 1rem;
+  color: #333;
 }
 
 .feature__item p {
-  color: var(--text-light);
+  color: #666;
+  line-height: 1.6;
 }
 
-.project__container {
-  padding: 5rem 0;
-  overflow-x: hidden;
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .features__list {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Display 2 features per row on smaller screens */
+  }
 }
 
 .project__header {
@@ -337,6 +356,11 @@ body {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+.project__details {
+  width: 100%;
+  text-align: center;
+}
+
 .project__details h4 {
   margin-bottom: 5px;
   font-size: 1.2rem;
@@ -354,6 +378,7 @@ body {
   padding: 0.75rem 1.25rem;
   outline: none;
   border: none;
+  width: 100%;
   color: var(--white);
   background-color: var(--primary-color);
   border-radius: 5px;
@@ -453,11 +478,11 @@ body {
 }
 
 .testimonial__item {
-  max-width: 400px;
+  max-width: 350px;
   background-color: var(--white);
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -548,6 +573,10 @@ body {
   color: var(--text-light);
 }
 
+.contact__content .section__subheader {
+  margin-bottom: 30px;
+}
+
 .contact__content button {
   max-width: fit-content;
   padding: 1rem 1.5rem;
@@ -576,58 +605,42 @@ body {
 
 .footer {
   background-color: var(--secondary-color);
+  color: var(--white);
+  height: 300px;
+  text-align: center;
 }
 
 .footer__container {
-  display: grid;
-  grid-template-columns: 2fr repeat(3, 1fr);
-  gap: 2rem;
+  max-width: var(--max-width);
+  margin: auto;
 }
 
-.footer__col h4 {
-  margin-bottom: 1.5rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--white);
-}
-
-.footer__col p {
-  margin-bottom: 1rem;
-  color: var(--white);
-}
-
-.footer__col a {
-  display: block;
-  margin-bottom: 1rem;
-  color: var(--extra-light);
-  transition: 0.3s;
-}
-
-.footer__col a span {
-  margin-right: 5px;
-}
-
-.footer__col a:hover {
-  color: var(--primary-color);
-}
-
-.footer__socials {
+.footer__col {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 1rem;
 }
 
-.footer__socials span {
-  font-size: 1.5rem;
+.footer__info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.footer__info a {
   color: var(--white);
-  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer__info a:hover {
+  color: var(--primary-color);
 }
 
 .footer__bar {
   padding: 1rem;
   font-size: 0.9rem;
-  color: var(--white);
-  text-align: center;
 }
 
 @media (width < 1200px) {
@@ -678,5 +691,46 @@ body {
 
   .footer__container {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Your existing CSS styles here */
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .modal-content {
+    margin: 30% auto;
   }
 }

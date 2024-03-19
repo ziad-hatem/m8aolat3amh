@@ -56,9 +56,56 @@ ScrollReveal().reveal(".contact__image img", {
   origin: "left",
 });
 
-const swiper = new Swiper(".swiper", {
-  loop: true,
-  slidesPerView: "auto",
-  centeredSlides: true,
-  spaceBetween: 30,
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize Swiper
+  const swiper = new Swiper(".swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  // Get modal and close button
+  const modal = document.getElementById("myModal");
+  const closeBtn = document.getElementsByClassName("close")[0];
+
+  // Get modal image and text elements
+  const modalImage = document.getElementById("modalImage");
+  const modalText = document.getElementById("modalText");
+
+  // Get all "المزيد" buttons
+  const showModalBtns = document.querySelectorAll(".show-modal");
+
+  // Function to open the modal
+  function openModal(event) {
+    const projectCard = event.target.closest(".project__card");
+    const imageSrc = projectCard.querySelector("img").src;
+    const projectName = projectCard.querySelector("h4").textContent;
+    const projectLocation = projectCard.querySelector("p").textContent;
+
+    modalImage.src = imageSrc;
+    modalText.innerHTML = `${projectName}<br>${projectLocation}`;
+
+    modal.style.display = "block";
+  }
+
+  // Function to close the modal
+  function closeModal() {
+    modal.style.display = "none";
+  }
+
+  // Event listeners
+  showModalBtns.forEach((btn) => {
+    btn.addEventListener("click", openModal);
+  });
+
+  closeBtn.addEventListener("click", closeModal);
+
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
 });

@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="testtaefasdgbh, ziadhatem, realestate" />
-    <meta name="author" content="Ziad Hatem" />
     <meta
       name="description"
-      content="Real Estate Website Number to call +201067609261"
+      content="شركة مقاولات في الكويت تقدم خدمات البناء والتشييد وتنفيذ المشاريع بأعلى معايير الجودة."
     />
+    <meta
+      name="keywords"
+      content="شركة مقاولات, البناء والتشييد, المقاولات الإنشائية, مشاريع البناء, مقاولون في الكويت, مقاولو البناء, أعمال الإنشاءات, مقاولو البناء في الكويت, Construction company, Building and construction, Civil contracting, Construction projects, Contractors in Kuwait, Building contractors, Construction works, Building contractors in Kuwait"
+    />
+    <meta name="author" content="شركة مقاولات" />
+    <meta name="geo.region" content="KW" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -20,6 +24,21 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/scrollreveal"></script>
     <title>عقارات</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "شركة مقاولات",
+        "url": "https://ziad-hatem.github.io/realestateinKuwait",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+965-12345678",
+          "contactType": "customer service",
+          "areaServed": "KW",
+          "availableLanguage": ["ar", "en"]
+        }
+      }
+    </script>
   </head>
   <body>
     <nav>
@@ -48,8 +67,8 @@
             العقار الذي تحلم به!
           </p>
           <div class="header__btns">
-            <button class="btn btn__secondary">Buy Now</button>
-            <button class="btn btn__primary">Learn More</button>
+            <a href="#contact" class="btn btn__secondary">اتصل الان</a>
+            <a href="#about" class="btn btn__primary">من نحن</a>
           </div>
         </div>
         <div class="header__image">
@@ -89,48 +108,32 @@
       </div>
     </section>
 
-    <section class="feature__container" id="features">
-      <div class="feature__content">
-        <h2 class="section__header">اكتشف مميزاتنا</h2>
-        <p class="section__subheader">
-          استكشف الميزات الحصرية التي تجعلنا شريكك المثالي في مجال العقارات.
-        </p>
-        <div class="feature__list">
-          <div class="feature__item">
-            <i class="ri-building-3-fill"></i>
-            <h3>محفظة عقارية واسعة</h3>
-            <p>
-              استكشف مجموعة متنوعة من العقارات، بما في ذلك الشقق والفلل
-              والمساحات التجارية.
-            </p>
-          </div>
-          <div class="feature__item">
-            <i class="ri-tools-fill"></i>
-            <h3>خدمات مهنية</h3>
-            <p>
-              استفد من خدمات مهنية مثل تقييم العقارات، والمشورة القانونية،
-              والاستشارات الاستثمارية.
-            </p>
-          </div>
-          <div class="feature__item">
-            <i class="ri-shield-star-fill"></i>
-            <h3>معاملات موثوقة</h3>
-            <p>
-              ضمان معاملات آمنة وشفافة من خلال شبكتنا الموثوقة من الشركاء
-              والخبراء القانونيين.
-            </p>
-          </div>
-          <div class="feature__item">
-            <i class="ri-user-3-fill"></i>
-            <h3>مساعدة شخصية</h3>
-            <p>
-              احصل على مساعدة وإرشاد شخصي طوال رحلتك في البحث عن العقارات ورحلتك
-              الاستثمارية.
-            </p>
-          </div>
+    <section class="features__container" id="features">
+      <h2 class="features__header">مميزاتنا</h2>
+      <div class="features__list">
+        <div class="feature__item">
+          <i class="ri-check-line"></i>
+          <h3>جودة عالية</h3>
+          <p>نقدم أعلى معايير الجودة في تنفيذ المشاريع.</p>
+        </div>
+        <div class="feature__item">
+          <i class="ri-time-line"></i>
+          <h3>تسليم في الوقت المحدد</h3>
+          <p>نلتزم بتسليم المشاريع في الوقت المحدد وبأعلى جودة ممكنة.</p>
+        </div>
+        <div class="feature__item">
+          <i class="ri-tools-line"></i>
+          <h3>خدمات شاملة</h3>
+          <p>نقدم خدمات متكاملة في مجال البناء والتشييد.</p>
+        </div>
+        <div class="feature__item">
+          <i class="ri-global-line"></i>
+          <h3>تواجد عالمي</h3>
+          <p>خدماتنا متاحة على مستوى العالم مع التوجيه للعملاء المحليين.</p>
         </div>
       </div>
     </section>
+
     <section class="project__container" id="project">
       <div class="project__header">
         <div>
@@ -140,8 +143,8 @@
           </p>
         </div>
         <div class="project__nav">
-          <span><i class="ri-arrow-left-line"></i></span>
           <span><i class="ri-arrow-right-line"></i></span>
+          <span><i class="ri-arrow-left-line"></i></span>
         </div>
       </div>
 
@@ -160,17 +163,7 @@
                     <span><i class="ri-map-pin-line"></i></span>
                     نخلة جميرا، دبي
                   </p>
-                  <button>احجز الآن</button>
-                </div>
-                <div class="project__ratings">
-                  <div class="stars">
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-half-fill"></i></span>
-                    <span><i class="ri-star-line"></i></span>
-                  </div>
-                  <div class="price">1200$</div>
+                  <button>المزيد</button>
                 </div>
               </div>
             </div>
@@ -185,17 +178,7 @@
                     <span><i class="ri-map-pin-line"></i></span>
                     وسط مدينة دبي
                   </p>
-                  <button>احجز الآن</button>
-                </div>
-                <div class="project__ratings">
-                  <div class="stars">
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-half-fill"></i></span>
-                  </div>
-                  <div class="price">1000$</div>
+                  <button>المزيد</button>
                 </div>
               </div>
             </div>
@@ -211,17 +194,7 @@
                     <span><i class="ri-map-pin-line"></i></span>
                     دبي مارينا
                   </p>
-                  <button>احجز الآن</button>
-                </div>
-                <div class="project__ratings">
-                  <div class="stars">
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                  </div>
-                  <div class="price">1100$</div>
+                  <button>المزيد</button>
                 </div>
               </div>
             </div>
@@ -236,17 +209,7 @@
                     <span><i class="ri-map-pin-line"></i></span>
                     البرشاء، دبي
                   </p>
-                  <button>احجز الآن</button>
-                </div>
-                <div class="project__ratings">
-                  <div class="stars">
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-half-fill"></i></span>
-                  </div>
-                  <div class="price">1500$</div>
+                  <button>المزيد</button>
                 </div>
               </div>
             </div>
@@ -262,17 +225,7 @@
                     <span><i class="ri-map-pin-line"></i></span>
                     بر دبي
                   </p>
-                  <button>احجز الآن</button>
-                </div>
-                <div class="project__ratings">
-                  <div class="stars">
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-half-fill"></i></span>
-                    <span><i class="ri-star-line"></i></span>
-                  </div>
-                  <div class="price">1300$</div>
+                  <button>المزيد</button>
                 </div>
               </div>
             </div>
@@ -287,19 +240,18 @@
                     <span><i class="ri-map-pin-line"></i></span>
                     شاطئ الجميرا، دبي
                   </p>
-                  <button>احجز الآن</button>
-                </div>
-                <div class="project__ratings">
-                  <div class="stars">
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-line"></i></span>
-                  </div>
-                  <div class="price">1400$</div>
+                  <button>المزيد</button>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="modal" id="myModal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <img id="modalImage" src="" alt="Modal Image" />
+              <p id="modalText">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
             </div>
           </div>
         </div>
@@ -450,47 +402,14 @@
     <footer class="footer">
       <div class="section__container footer__container">
         <div class="footer__col">
-          <h4>هولكس</h4>
-          <p>
-            فريقنا من المحترفين ذوي الخبرة ملتزم بتقديم خدمة استثنائية لكم، مع
-            معرفة عميقة بالسوق وحلول شخصية مصممة خصيصًا لاحتياجاتكم الفريدة.
-          </p>
-          <div class="footer__socials">
-            <span>
-              <a href="#"><i class="ri-facebook-circle-fill"></i></a>
-            </span>
-            <span>
-              <a href="#"><i class="ri-instagram-line"></i></a>
-            </span>
-            <span>
-              <a href="#"><i class="ri-twitter-fill"></i></a>
-            </span>
+          <div class="footer__info">
+            <span><i class="ri-mail-line"></i></span>
+            <a href="mailto:ziadhatem@gmail.com">ziad@gmail.com</a>
           </div>
-        </div>
-        <div class="footer__col">
-          <h4>معلومات الشركة</h4>
-          <a href="#home">الرئيسية</a>
-          <a href="#about">من نحن</a>
-          <a href="#features">مميزاتنا</a>
-          <a href="#project">المشاريع</a>
-          <a href="#services">خدماتنا</a>
-          <a href="#testimonials">اراء العملاء</a>
-          <a href="#contact">اتصل بنا</a>
-        </div>
-        <div class="footer__col">
-          <h4>الموارد</h4>
-          <a href="#">الشروط</a>
-          <a href="#">الأحكام</a>
-          <a href="#">السياسة</a>
-        </div>
-        <div class="footer__col">
-          <h4>التواصل</h4>
-          <a href="mailto:ziadhatem@gmail.com">
-            <span><i class="ri-mail-line"></i></span> ziad@gmail.com
-          </a>
-          <a href="tel:+201067609261">
-            <span><i class="ri-phone-line"></i></span> +20 106 760 9261
-          </a>
+          <div class="footer__info">
+            <span><i class="ri-phone-line"></i></span>
+            <a href="tel:+201067609261">+20 106 760 9261</a>
+          </div>
         </div>
       </div>
       <div class="footer__bar">
@@ -498,21 +417,7 @@
       </div>
     </footer>
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "اسم موقعك",
-        "url": "https://www.yourwebsite.com/",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+1234567890",
-          "contactType": "customer service"
-        }
-      }
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
     <script src="main.js"></script>
   </body>
 </html>
