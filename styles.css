@@ -157,7 +157,7 @@ nav {
 }
 
 .header__content {
-  padding: 5rem 1rem;
+  padding: 6rem 1rem;
   grid-column: 2/3;
 }
 
@@ -168,6 +168,17 @@ nav {
   line-height: 5rem;
   color: var(--text-dark);
 }
+
+@media (max-width: 768px) {
+  .header__content {
+    padding: 1rem 1rem;
+  }
+  .header__content h1 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+
 .header__content p {
   margin-bottom: 2rem;
   font-size: 16px;
@@ -186,8 +197,9 @@ nav {
 }
 
 .header__image img {
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  width: 90%;
+  object-fit: contain;
 }
 
 .about__container {
@@ -200,6 +212,7 @@ nav {
 
 .about__image img {
   max-width: 450px;
+  object-fit: contain;
   margin: auto;
 }
 
@@ -234,7 +247,6 @@ nav {
 /* Add this CSS to your existing styles.css file */
 
 /* Feature Section */
-/* Feature Section */
 .features__container {
   padding: 4rem 0;
   background-color: #f8f8f8;
@@ -257,6 +269,15 @@ nav {
   ); /* Updated to display 3 features per row */
   gap: 2rem;
   justify-items: center;
+}
+
+@media (max-width: 768px) {
+  .features__list {
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ) !important; /* Display 2 features per row on smaller screens */
+  }
 }
 
 .feature__item {
@@ -333,6 +354,13 @@ nav {
 
 .swiper-slide {
   width: 420px;
+}
+
+.swiper-slide img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .project__card {
@@ -695,42 +723,43 @@ nav {
 }
 
 /* Your existing CSS styles here */
-
-/* Modal styles */
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
 }
-
 .modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border-radius: 5px;
+  margin: 5% auto;
   width: 80%;
   max-width: 600px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 5px;
 }
-
 .close {
-  position: absolute;
-  top: 10px;
-  right: 20px;
+  color: #aaa;
+  float: right;
   font-size: 28px;
-  color: #333;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
   cursor: pointer;
 }
+.learn-more {
+  display: none; /* Initially hidden */
+}
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .modal-content {
-    margin: 30% auto;
+    width: 100%; /* Display on smaller screens */
   }
 }

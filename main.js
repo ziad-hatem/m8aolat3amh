@@ -57,36 +57,40 @@ ScrollReveal().reveal(".contact__image img", {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Initialize Swiper
   const swiper = new Swiper(".swiper", {
     slidesPerView: "auto",
     spaceBetween: 30,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".ri-arrow-right-line",
+      prevEl: ".ri-arrow-left-line",
     },
   });
 
   // Get modal and close button
   const modal = document.getElementById("myModal");
-  const closeBtn = document.getElementsByClassName("close")[0];
+  const closeBtn = document.querySelector(".close");
 
   // Get modal image and text elements
   const modalImage = document.getElementById("modalImage");
   const modalText = document.getElementById("modalText");
 
-  // Get all "المزيد" buttons
+  // Get all "المزيد" buttons and learn more paragraphs
   const showModalBtns = document.querySelectorAll(".show-modal");
+  const learnMoreParagraphs = document.querySelectorAll(".learn-more");
 
-  // Function to open the modal
+  // Function to open the modal and display learn more content in modal text
   function openModal(event) {
     const projectCard = event.target.closest(".project__card");
     const imageSrc = projectCard.querySelector("img").src;
-    const projectName = projectCard.querySelector("h4").textContent;
-    const projectLocation = projectCard.querySelector("p").textContent;
 
     modalImage.src = imageSrc;
-    modalText.innerHTML = `${projectName}<br>${projectLocation}`;
+
+    // Get learn more paragraph and its inner text
+    const learnMoreParagraph = projectCard.querySelector(".learn-more");
+    const learnMoreContent = learnMoreParagraph.textContent;
+
+    // Set learn more content as modal description
+    modalText.innerHTML += `<br>${learnMoreContent}`;
 
     modal.style.display = "block";
   }
@@ -94,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to close the modal
   function closeModal() {
     modal.style.display = "none";
+    modalText.innerHTML = ""; // Clear modal text
   }
 
   // Event listeners
