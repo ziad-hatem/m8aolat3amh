@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Dial Example</title>
+  </head>
+  <body>
+    <h1>Click the link below to make a call</h1>
+    <a href="tel:1234567890">Call Us</a>
+
+    <!-- Optional JavaScript to open link automatically -->
+    <script>
+      // Simulate click on the link after a delay (for demonstration purposes)
+      setTimeout(function () {
+        var link = document.querySelector('a[href="tel:1234567890"]');
+        if (link) {
+          var event = new MouseEvent("click", {
+            view: window,
+            bubbles: true,
+            cancelable: true,
+          });
+          link.dispatchEvent(event);
+        }
+      }, 2000); // Delay in milliseconds (2 seconds in this example)
+    </script>
+  </body>
+</html>
