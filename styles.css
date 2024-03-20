@@ -198,7 +198,7 @@ nav {
 
 .header__image img {
   height: auto;
-  width: 90%;
+  width: 100%;
   object-fit: contain;
 }
 
@@ -214,6 +214,19 @@ nav {
   max-width: 450px;
   object-fit: contain;
   margin: auto;
+}
+
+.callusModal {
+  color: var(--white);
+  background-color: var(--primary-color);
+  padding: 0.6rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  margin: 10px 0;
+  display: inline-block;
+  text-align: center;
 }
 
 .about__content h3 {
@@ -249,7 +262,6 @@ nav {
 /* Feature Section */
 .features__container {
   padding: 4rem 0;
-  background-color: #f8f8f8;
   text-align: center;
   width: 80%;
   margin: auto;
@@ -354,6 +366,13 @@ nav {
 
 .swiper-slide {
   width: 420px;
+}
+
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 380px;
+    padding: 0 1.2rem;
+  }
 }
 
 .swiper-slide img {
@@ -634,7 +653,6 @@ nav {
 .footer {
   background-color: var(--secondary-color);
   color: var(--white);
-  height: 300px;
   text-align: center;
 }
 
@@ -735,7 +753,7 @@ nav {
   background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
 }
 .modal-content {
-  margin: 5% auto;
+  margin: 10% auto;
   width: 80%;
   max-width: 600px;
   background-color: #fefefe;
@@ -757,9 +775,24 @@ nav {
 .learn-more {
   display: none; /* Initially hidden */
 }
-
+/* Show modal with fade-in effect */
+.modal.show {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @media (max-width: 768px) {
   .modal-content {
-    width: 100%; /* Display on smaller screens */
+    padding: 10px;
+  }
+  .close {
+    font-size: 20px;
   }
 }
